@@ -1,0 +1,670 @@
+@import './common.scss';
+
+/* base
+   ========================================================================== */
+.zy-card {
+    .el-card__header {
+        padding: 4px 20px;
+        background: $primary;
+    }
+
+    .el-card__body {
+        padding: 10px !important;
+    }
+
+    .card-hd {
+        .iconfont,
+        span {
+            color: $white;
+        }
+        .iconfont {
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+    }
+}
+
+/* login 登录
+   ========================================================================== */
+
+.login-content {
+    height: 100vh;
+    background: url('../images/login/login_bg.png') no-repeat center;
+    background-size: cover;
+
+    .qr-code {
+        .qr-code-small {
+            width: 26px;
+            height: 26px;
+            background: url('../images/login/qr-code-small.png') no-repeat;
+            background-size: cover;
+        }
+
+        .qr-code-big {
+            display: none;
+            bottom: -182px;
+            width: 180px;
+            height: 180px;
+            background: url('../images/login/qr-code-big.png') no-repeat center;
+            background-size: cover;
+        }
+
+        &:hover {
+            .qr-code-big {
+                display: block;
+            }
+        }
+    }
+
+    .header-logo {
+        .logo {
+            width: 170px;
+        }
+    }
+
+    .login-main {
+        height: calc(100% - 120px);
+        .main-img,
+        .main-form {
+            width: 50%;
+            height: 100%;
+        }
+
+        .main-img {
+            left: 0;
+            background: url('../images/login/login_img_bg.png') no-repeat center;
+            background-size: 90%;
+        }
+    }
+
+    .main-form {
+        right: 0;
+        .login-form {
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            transition: all 0.4s;
+            .form-icon {
+                left: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .form-enter {
+        margin: 20px auto 0;
+        width: 60%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 32px;
+        padding: 0;
+        font-size: 16px;
+        transition: all 0.4s;
+    }
+
+    .slogan .text {
+        font-size: 20px;
+        margin: 0 2px;
+        color: #fff;
+        display: inline-block;
+        -webkit-transform: translate(0, -20px);
+        -ms-transform: translate(0, -20px);
+        transform: translate(0, -20px);
+        opacity: 0;
+        -webkit-animation: fade-in 1s forwards;
+        animation: fade-in 1s forwards;
+    }
+
+    .login-footer {
+        bottom: 10px;
+    }
+
+    .footer-record {
+        .ba-icon {
+            width: 22px;
+            height: 22px;
+            background: url('../images/login/ba-gwa.png') no-repeat center;
+        }
+        .el-link {
+            &:hover {
+                color: #60dee0 !important;
+                &:after {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    // 循环出延迟
+    @for $index from 1 through 12 {
+        .slogan .t-#{$index} {
+            -webkit-animation-delay: $index * 0.2s;
+            animation-delay: $index * 0.2s;
+        }
+    }
+
+    @-webkit-keyframes fade-in {
+        100% {
+            opacity: 1;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes fade-in {
+        100% {
+            opacity: 1;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .main-img {
+            background-size: 570px !important;
+        }
+
+        .login-form {
+            left: 40% !important;
+            transform: translate(-50%, -70%);
+        }
+    }
+
+    @media (max-width: 1160px) {
+        .slogan .text {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .form-enter {
+            width: 100%;
+        }
+    }
+}
+
+/* home
+   ========================================================================== */
+.home-content {
+    height: 100vh;
+    .home-aside {
+        flex-grow: 0;
+        flex-shrink: 0;
+        background: url('../images/common/home_menu_bg.jpg');
+        overflow-x: auto;
+    }
+    .home-main {
+        overflow: hidden;
+    }
+}
+
+// home-aside
+.aside-func {
+    line-height: 45px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 14px;
+    .aside-refresh,
+    .aside-spread {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .aside-spread {
+        left: 10px;
+    }
+
+    .aside-toggle {
+        span {
+            margin: 0 4px;
+        }
+    }
+    .aside-refresh {
+        right: 10px;
+    }
+}
+
+// menu
+.aside-menu,
+.el-submenu__title,
+.el-menu--inline,
+.el-menu--inline .el-menu-item {
+    background: transparent !important;
+}
+
+// 正常状态下的菜单
+.aside-menu {
+    border: none !important;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    .iconfont,
+    .el-submenu__icon-arrow {
+        color: $white;
+    }
+
+    .iconfont {
+        font-size: 20px;
+        margin-right: 4px;
+    }
+    .el-submenu__title {
+        height: 50px !important;
+        line-height: 50px !important;
+        &:hover {
+            background: $primary !important;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+        }
+    }
+    .el-menu--inline .el-menu-item {
+        &:hover {
+            background: #235f8c !important;
+        }
+    }
+    // 当前页面
+    .is-active {
+        color: #fff !important;
+        background: #235f8c !important;
+    }
+
+    .el-menu-item {
+        height: 40px !important;
+        line-height: 40px !important;
+    }
+}
+
+// 折叠状态下的展开菜单
+.el-menu--vertical {
+    background: #f7f7f7;
+    left: 54px !important;
+    border-left: 6px solid $primary;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
+    .el-menu-item {
+        color: #333 !important;
+        &:hover {
+            color: $primary !important;
+            background: transparent !important;
+        }
+    }
+}
+
+// 打开二级菜单
+.is-opened {
+    .el-menu--inline,
+    .el-submenu__title {
+        background: $primary !important;
+        overflow: hidden;
+    }
+
+    .el-submenu__title {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+        z-index: 99;
+    }
+}
+
+// 用户信息
+.aside-user {
+    .user-avatar {
+        width: 80px;
+        overflow: hidden;
+        margin: 0 auto 10px;
+    }
+
+    .user-info {
+        color: $white;
+    }
+}
+
+// hide-aside
+.hide-aside {
+    .aside-func {
+        height: 45px;
+    }
+    .aside-spread {
+        left: 18px;
+    }
+    .aside-toggle,
+    .aside-refresh {
+        display: none;
+    }
+
+    .user-avatar {
+        width: 40px;
+    }
+
+    .user-info {
+        display: none;
+    }
+}
+
+// home-header
+.home-header {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.38);
+    .header-company {
+        min-width: 260px;
+    }
+    .header-breadcrumb {
+        overflow: hidden;
+    }
+
+    .breadcrumb-main {
+        width: 10000px;
+        .breadcrumb-close {
+            right: 10px;
+            font-size: 24px;
+            color: $primary;
+        }
+    }
+
+    .header-other {
+        color: $primary;
+    }
+}
+
+.home-view {
+    box-sizing: border-box;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+/* index
+   ========================================================================== */
+.index-header {
+    height: 400px;
+}
+.header-modules {
+    height: 400px;
+    box-sizing: border-box;
+    .el-card__body {
+        padding-bottom: 0 !important;
+    }
+    .card-body {
+        height: calc(100% - 43px);
+    }
+}
+
+// 状态
+.survey-icon {
+    width: 100px;
+    height: 46px;
+    margin: 0 auto;
+    background: url('../images/common/index_survey_icon.png') no-repeat center;
+    background-size: cover;
+}
+
+.status-top .status-icon {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto;
+    background: url('../images/common/index_status_top_icon.png') no-repeat;
+    background-size: cover;
+}
+
+.status-link {
+    .status-title {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            background: #01ada8 !important;
+            .bo {
+                z-index: 9;
+                animation: bo 1s infinite;
+                animation-delay: 0.1s;
+            }
+
+            .bo1 {
+                animation-delay: 0.2s;
+            }
+        }
+    }
+
+    .status-img {
+        .im {
+            width: 41px;
+            height: 29px;
+            margin: 0 auto;
+            background: url('../images/common/index_status_bottom_icon.png')
+                no-repeat;
+        }
+    }
+}
+
+// 记录栏目
+.index-log {
+    // 当日事件记录
+    .log-func {
+        height: 174px;
+        box-sizing: border-box;
+        .func-hd {
+            height: 74px;
+            line-height: 74px;
+            background: url('../images/common/index_func_bg.jpg') no-repeat
+                center;
+            background-size: cover;
+        }
+    }
+
+    // 近期巡检记录
+    .log-inspect {
+        height: calc(100% - 194px);
+
+        // 合格率
+        .inspect-pass {
+            width: 136px;
+            height: 127px;
+            background: url('../images/index/log-inspect.png') no-repeat center;
+            background-size: cover;
+            bottom: -18px;
+            right: 6%;
+            padding-top: 26px;
+            box-sizing: border-box;
+            .number {
+                font-size: 28px;
+                color: #ff5f5e;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+// card-btn
+.card-btn-item {
+    padding: 0 20px;
+    &.active,
+    &:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+// 用电概况
+.use-ele-item {
+    line-height: 70px;
+    margin-bottom: 23px;
+    overflow: hidden;
+
+    .title {
+        border-radius: 12px;
+        color: #fff;
+        font-size: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            top: 35%;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute;
+            right: -18px;
+        }
+    }
+    .number {
+        font-size: 20px;
+    }
+    &:nth-child(1) {
+        background: #b4a3e966;
+        .title {
+            background: #b4a3e9;
+            &::before {
+                border-left: 18px solid #b4a3e9;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        background: #2dc4d966;
+        .title {
+            background: #2dc4d9;
+            &::before {
+                border-left: 18px solid #2dc4d9;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        background: #92d40066;
+        .title {
+            background: #92d400;
+            &::before {
+                border-left: 18px solid #92d400;
+            }
+        }
+    }
+}
+
+.use-ele-status {
+    width: 22px;
+    height: 38px;
+    top: 50%;
+    margin-top: -16px;
+    left: 150px;
+    &.up {
+        background: url('../images/common/use-ele-up.png');
+    }
+
+    &.down {
+        background: url('../images/common/use-ele-down.png');
+    }
+}
+
+// status动画
+.bo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border: 4px solid paleturquoise;
+    border-radius: 50%;
+}
+@keyframes bo {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@-webkit-keyframes bo /*Safari and Chrome*/ {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .status-link {
+        .status-title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 46px;
+        }
+    }
+    .inspect-item {
+        span {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+
+/* survey-monthly
+   ========================================================================== */
+.survey-monthly {
+    .has-gutter {
+        .is-leaf {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+/* survey-map
+   ========================================================================== */
+.map-label-hide {
+    display: none !important;
+}
+
+.map-total {
+    right: 10px;
+    top: 10%;
+    width: 320px;
+    height: 470px;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+    .map-item {
+        margin-top: 8px;
+        .icon {
+            height: 56px;
+            width: 56px;
+            margin: 0 auto;
+            background: url('../images/map/map-totel.png') no-repeat;
+            background-position: 4px 10px;
+        }
+
+        .title {
+            line-height: 1.4;
+        }
+
+        .number {
+            line-height: 1.8;
+        }
+    }
+
+    .show-title {
+        margin: 0 auto;
+    }
+}
+
+/* env-status-yb 通讯仪表状态
+   ========================================================================== */
+.env-status-yb {
+    min-width: 1200px;
+    .search-btn {
+        border-color: $primary;
+        background: $primary;
+    }
+    .has-gutter {
+        .is-leaf {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+.search-yb-name {
+    max-width: 200px;
+}
+
+// 变压器列表
+@media (max-width: 1200px) {
+    .byq-left {
+        margin-bottom: 20px;
+    }
+}

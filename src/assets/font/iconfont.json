@@ -1,0 +1,114 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "504573",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "560231",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "689212",
+      "name": "表单 页面",
+      "font_class": "biaodanyemian",
+      "unicode": "e7cc",
+      "unicode_decimal": 59340
+    },
+    {
+      "icon_id": "807967",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "1001058",
+      "name": "状态",
+      "font_class": "iconfkzt",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7287160",
+      "name": "用电分析",
+      "font_class": "yongdianfenxi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7539993",
+      "name": "事件",
+      "font_class": "shijian",
+      "unicode": "e79f",
+      "unicode_decimal": 59295
+    },
+    {
+      "icon_id": "8842685",
+      "name": "铃铛",
+      "font_class": "lingdang",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "9512521",
+      "name": "电脑",
+      "font_class": "computer",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "9559033",
+      "name": "菜单",
+      "font_class": "ziyuan",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "10028196",
+      "name": "关闭",
+      "font_class": "guanbi1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11391502",
+      "name": "警报",
+      "font_class": "jingbao",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "12600980",
+      "name": "xlsx",
+      "font_class": "xlsx",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "13271519",
+      "name": "无线信号强度0",
+      "font_class": "-wuxian-",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "13271523",
+      "name": "无线信号强度5",
+      "font_class": "-wuxian-1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}
